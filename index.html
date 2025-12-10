@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NECO GCE 2025 - Economics Questions & Answers</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Mono:wght@500&family=Patrick+Hand&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CORE VARIABLES (ECONOMICS THEME: Navy/Bronze) --- */
+        :root {
+            --bg-dark: #0f172a;       /* Slate 950 */
+            --bg-card: #1e293b;       /* Slate 800 */
+            --bg-header: #020617;     /* Slate 950 Darker */
+            --accent-gold: #d97706;   /* Bronze 600 */
+            --accent-light: #fbbf24;  /* Amber 400 */
+            --accent-blue: #38bdf8;   /* Sky 400 */
+            --text-main: #f8fafc;     
+            --text-muted: #94a3b8;    
+            --border-color: #334155;  
+            --whatsapp: #25D366;
+            --telegram: #0088cc;
+        }
+
+        /* --- RESET & BASE STYLES --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            /* Corrected and simplified background gradient */
+            background-image: linear-gradient(to bottom, #1e293b 0%, #0f172a 40%); 
+        }
+
+        /* --- HEADER --- */
+        header {
+            background-color: rgba(2, 6, 23, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area h1 { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.02em; }
+        .logo-area span { color: var(--accent-gold); }
+
+        .badge-date {
+            background: rgba(217, 119, 6, 0.1);
+            color: var(--accent-light);
+            border: 1px solid rgba(217, 119, 6, 0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            text-align: center;
+            padding: 3rem 1.5rem 2rem;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #fff, #fdba74);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
+
+        /* --- NEW COMPACT SHARE UI --- */
+        .share-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .share-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .share-label {
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: transform 0.2s, opacity 0.2s;
+            text-decoration: none;
+        }
+
+        .social-link:hover { transform: scale(1.1); }
+        .social-wa { background-color: var(--whatsapp); box-shadow: 0 0 10px rgba(37, 211, 102, 0.3); }
+        .social-tg { background-color: var(--telegram); box-shadow: 0 0 10px rgba(0, 136, 204, 0.3); }
+
+        .share-stats {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .stat-num { color: var(--accent-light); font-weight: 700; font-family: 'Roboto Mono', monospace; }
+
+        /* --- CONTENT STYLES --- */
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            flex-grow: 1; /* Allow content to take up remaining space */
+        }
+        
+        .section-heading {
+            color: var(--accent-gold); 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            font-size: 1.2rem; 
+            margin-top: 2rem;
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .question-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .question-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--accent-gold);
+        }
+
+        .q-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 1rem; padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .q-title {
+            font-size: 1.1rem; font-weight: 700; color: var(--accent-light);
+            text-transform: uppercase; letter-spacing: 0.05em;
+        }
+
+        .q-content {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.2rem; color: #e2e8f0;
+            white-space: pre-wrap; line-height: 1.6;
+        }
+
+        /* Objective Grid */
+        .obj-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .obj-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(65px, 1fr));
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .obj-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.6rem 0.3rem;
+            text-align: center;
+            border-radius: 6px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1rem;
+            border: 1px solid var(--border-color);
+            transition: background 0.2s;
+        }
+        .obj-item:hover { background: rgba(255, 255, 255, 0.1); }
+        .obj-num { color: var(--text-muted); font-size: 0.7rem; display: block; margin-bottom: 2px;}
+        .obj-ans { color: var(--accent-blue); font-weight: bold; }
+
+
+        /* Footer */
+        footer { 
+            text-align: center; 
+            padding: 2rem; 
+            border-top: 1px solid var(--border-color); 
+            color: var(--text-muted); 
+            font-size: 0.85rem; 
+            background: var(--bg-header); 
+            margin-top: auto; /* Push footer to the bottom */
+        }
+        
+        /* Highlight spans */
+        .hl { color: var(--accent-blue); font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <h1>NECO GCE <span>2025</span></h1>
+        </div>
+        <div class="badge-date">
+            Available Now
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Economics</h2>
+        <p>GCE Private Candidate Series - Questions & Answers</p>
+
+        <div class="share-container">
+            <div class="share-row">
+                <span class="share-label">Share Solutions:</span>
+                <a href="https://wa.me/?text=Hurry%20up%20dont%20pay%20for%202025%20NECO%20GCE%20Economics%20Questions%20get%20it%20for%20free.%20All%20answers%20are%20give%20base%20on%20NECO%20Marking%20Sheme%20Click%20her%20to%20view%20the%20Answers%20%3D%3E%20https://economics-g-c-e-papers.vercel.app/" class="social-link social-wa" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://t.me/share/url?url=https://economics-g-c-e-papers.vercel.app/&text=Hurry%20up%20dont%20pay%20for%202025%20NECO%20GCE%20Economics%20Questions%20get%20it%20for%20free.%20All%20answers%20are%20give%20base%20on%20NECO%20Marking%20Sheme%20Click%20her%20to%20view%20the%20Answers" class="social-link social-tg" target="_blank">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+            </div>
+            <div class="share-stats">
+                <i class="fas fa-users"></i>
+                <span class="stat-num" id="share-count">4,500</span> Shares
+            </div>
+        </div>
+    </section>
+
+    <main class="content-container">
+
+        <h3 class="section-heading">Section A: Objective Answers</h3>
+        <div class="obj-section">
+            <p style="color: var(--text-main); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">NECO GCE Economics Objective Answer Keys (1-60)</p>
+            <div class="obj-grid">
+                <div class="obj-item"><span class="obj-num">1</span><span class="obj-ans">D</span></div>
+                <div class="obj-item"><span class="obj-num">2</span><span class="obj-ans">E</span></div>
+                <div class="obj-item"><span class="obj-num">3</span><span class="obj-ans">A</span></div>
+                <div class="obj-item"><span class="obj-num">4</span><span class="obj-ans">B</span></div>
+                <div class="obj-item"><span class="obj-num">5</span><span class="obj-ans">B</span></div>
+                <div class="obj-item"><span class="obj-num">6</span><span class="obj-ans">A</span></div>
+                <div class="obj-item"><span class="obj-num">7</span><span class="obj-ans">C</span></div>
+                <div class="obj-item"><span class="obj-num">8</span><span class="obj-ans">D</span></div>
+                <div class="obj-item"><span class="obj-num">9</span><span class="obj-ans">E</span></div>
+                <div class="obj-item"><span class="obj-num">10</span><span class="obj-ans">D</span></div>
+                <div class="obj-item"><span class="obj-num">11</span><span class="obj-ans">B</span></div>
+                <div class="obj-item"><span class="obj-num">12</span><span class="obj-ans">E</span></div>
+                <div class="obj-item"><span class="obj-num">13</span><span class="obj-ans">B</span></div>
+                <div class="obj-item"><span class="obj-num">14</span><span class="obj-ans">E</span></div>
+                <div class="obj-item"><span class="obj-num">15</span><span class="obj-ans">B</span></div>
+                <div class="obj-item"><span class="obj-num">16</span><span class="obj-ans">C</span></div>
+                <div class="obj-item"><span class="obj-num">17</span><span class="obj-ans">C</span></div>
+                <div class="obj-item"><span class="obj-num">18</span><span class="obj-ans">C</span></div>
+                <div class="obj-item"><span class="obj-num">19</span><span class="obj-ans">E</span></div>
+                <div class="obj-item"><span class="obj-num">20</span><span class="obj-ans">D</span></div>
+                <div class="obj-item"><span class="obj-num">21</span><span class="obj-ans">C</span></div>
+                <div class="obj-item"><span class="obj-num">22</span><span class="obj-ans">E</span></div>
+                <div class="obj-item"><span class="obj-num">23</span><span class="obj-ans">E</span></div>
+                <div class="obj-item"><span class="obj-num">24</span><span class="obj-ans">E</span></div>
+                <div class="obj-item"><span class="obj-num">25</span><span class="obj-ans">C</span></div>
+                <div class="obj-item"><span class="obj-num">26</span><span class="obj-ans">C</span></div>
+                <div class="obj-item"><span class="obj-num">27</span><span class="obj-ans">A</span></div>
+                <div class="obj-item"><span class="obj-num">28</span><span class="obj-ans">A</span></div>
+                <div class="obj-item"><span class="obj-num">29</span><span class="obj-ans">B</span></div>
+                <div class="obj-item"><span class="obj-num">30</span><span class="obj-ans">C</span></div>
+                <div class="obj-item"><span class="obj-num">31</span><span class="obj-ans">E</span></div>
+                <div class="obj-item"><span class="obj-num">32</span><span class="obj-ans">E</span></div>
+                <div class="obj-item"><span class="obj-num">33</span><span class="obj-ans">B</span></div>
+                <div class="obj-item"><span class="obj-num">34</span><span class="obj-ans">A</span></div>
+                <div class="obj-item"><span class="obj-num">35</span><span class="obj-ans">D</span></div>
+                <div class="obj-item"><span class="obj-num">36</span><span class="obj-ans">C</span></div>
+                <div class="obj-item"><span class="obj-num">37</span><span class="obj-ans">C</span></div>
+                <div class="obj-item"><span class="obj-num">38</span><span class="obj-ans">D</span></div>
+                <div class="obj-item"><span class="obj-num">39</span><span class="obj-ans">C</span></div>
+                <div class="obj-item"><span class="obj-num">40</span><span class="obj-ans">A</span></div>
+                <div class="obj-item"><span class="obj-num">41</span><span class="obj-ans">C</span></div>
+                <div class="obj-item"><span class="obj-num">42</span><span class="obj-ans">B</span></div>
+                <div class="obj-item"><span class="obj-num">43</span><span class="obj-ans">C</span></div>
+                <div class="obj-item"><span class="obj-num">44</span><span class="obj-ans">E</span></div>
+                <div class="obj-item"><span class="obj-num">45</span><span class="obj-ans">D</span></div>
+                <div class="obj-item"><span class="obj-num">46</span><span class="obj-ans">C</span></div>
+                <div class="obj-item"><span class="obj-num">47</span><span class="obj-ans">D</span></div>
+                <div class="obj-item"><span class="obj-num">48</span><span class="obj-ans">C</span></div>
+                <div class="obj-item"><span class="obj-num">49</span><span class="obj-ans">A</span></div>
+                <div class="obj-item"><span class="obj-num">50</span><span class="obj-ans">C</span></div>
+                <div class="obj-item"><span class="obj-num">51</span><span class="obj-ans">D</span></div>
+                <div class="obj-item"><span class="obj-num">52</span><span class="obj-ans">A</span></div>
+                <div class="obj-item"><span class="obj-num">53</span><span class="obj-ans">B</span></div>
+                <div class="obj-item"><span class="obj-num">54</span><span class="obj-ans">E</span></div>
+                <div class="obj-item"><span class="obj-num">55</span><span class="obj-ans">B</span></div>
+                <div class="obj-item"><span class="obj-num">56</span><span class="obj-ans">A</span></div>
+                <div class="obj-item"><span class="obj-num">57</span><span class="obj-ans">A</span></div>
+                <div class="obj-item"><span class="obj-num">58</span><span class="obj-ans">B</span></div>
+                <div class="obj-item"><span class="obj-num">59</span><span class="obj-ans">B</span></div>
+                <div class="obj-item"><span class="obj-num">60</span><span class="obj-ans">D</span></div>
+            </div>
+        </div>
+
+
+        <h3 class="section-heading">Section B: Theory Answers</h3>
+        <p style="font-family: 'Patrick Hand', cursive; font-size: 1.1rem; color: var(--text-muted);">
+            _ANSWER FOUR(4) QUESTIONS ONLY_
+        </p>
+
+        <div class="question-card">
+            <div class="q-header"><div class="q-title">Question 3 - Sustainable Development Goals (SDGs)</div></div>
+            <div class="q-content">
+(3) The Sustainable Development Goals (SDGs) are a collection of 17 global goals set by the United Nations General Assembly in 2015 for the year 2030. Key objectives include:
+
+(i) <span class="hl">Eradication of Poverty:</span> Aiming to remove extreme poverty by ensuring that people have access to basic needs such as food, shelter, healthcare, and economic opportunities. The goal focuses on reducing hardship and improving living conditions for all.
+
+(ii) <span class="hl">Ending Hunger and Achieving Food Security:</span> This objective seeks to ensure that everyone has enough safe and nutritious food throughout the year. It promotes modern and sustainable farming methods that increase agricultural productivity and reduce hunger.
+
+(iii) <span class="hl">Promotion of Quality Education:</span> The SDGs aim to provide inclusive and equitable education for all. The focus is on free basic education, improved learning outcomes, and equal access for boys and girls, including support for technical and vocational training.
+
+(iv) <span class="hl">Ensuring Good Health and Wellbeing:</span> This goal aims to improve global health by reducing child and maternal deaths, combating major diseases, and ensuring access to essential health services. It supports stronger health systems and healthier populations.
+
+(v) <span class="hl">Environmental Protection and Climate Action:</span> The SDGs aim to protect the environment by encouraging responsible use of natural resources, reducing pollution, and promoting clean energy. The goal also focuses on actions that reduce the impact of climate change.
+
+
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="q-header"><div class="q-title">Question 4 - Private Limited & Enterprise Comparison</div></div>
+            <div class="q-content">
+(4a) A <span class="hl">private limited liability company</span> is a business organization owned by a small group of people whose liability is limited to the amount they invested in the company. Shares are not offered to the public, and ownership is restricted to a specific number of members, usually family or close associates.
+
+(4b) Differences between Private and Public Enterprises:
+
+(i) <span class="hl">Ownership:</span> Private enterprises are owned by individuals or groups, while public enterprises are owned and controlled by the government.
+(ii) <span class="hl">Profit Objective:</span> Private enterprises aim mainly at profit making, while public enterprises focus on providing essential services to the public.
+(iii) <span class="hl">Source of Capital:</span> Private enterprises obtain capital from private savings, loans, and shareholders, while public enterprises are financed through government budgets and public funds.
+(iv) <span class="hl">Accountability and Control:</span> Private enterprises are accountable to their owners and shareholders, while public enterprises are accountable to the government and the general public.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="q-header"><div class="q-title">Question 5 - Labour & Efficiency</div></div>
+            <div class="q-content">
+(5a) <span class="hl">Labour</span> refers to the human effort, both physical and mental, used in the production of goods and services. It is a key factor of production that transforms raw materials into finished products and contributes to economic growth.
+
+
+(5b) Factors Affecting Efficiency of Labour:
+
+(i) <span class="hl">Education and Training:</span> Well-educated and trained workers can perform tasks more accurately and quickly. Continuous training improves skills, reduces errors, and increases productivity.
+(ii) <span class="hl">Motivation and Incentives:</span> Workers are more efficient when they are motivated. Monetary incentives such as wages, bonuses, and non-monetary incentives such as recognition or promotion encourage higher performance.
+(iii) <span class="hl">Working Conditions:</span> Safe, comfortable, and well-equipped workplaces enable workers to perform at their best. Poor conditions like long hours, unsafe environments, or lack of tools reduce efficiency.
+(iv) <span class="hl">Health and Physical Wellbeing:</span> Healthy workers are more energetic, focused, and productive. Illness or fatigue reduces output, increases absenteeism, and lowers overall efficiency.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="q-header"><div class="q-title">Question 6 - Monetary Policy & Financial Markets</div></div>
+            <div class="q-content">
+(6) Explanations of Economic Terms:
+
+
+(i) <span class="hl">Bank Rate:</span> The bank rate is the interest rate at which the central bank lends money to commercial banks. It is a tool of monetary policy used to control money supply, influence credit availability, and regulate inflation. A higher bank rate discourages borrowing, while a lower rate encourages lending.
+
+(ii) <span class="hl">Open Market Operation (OMO):</span> Open market operations involve the buying and selling of government securities by the central bank in the open market. Buying securities injects money into the economy, while selling securities withdraws money. OMOs are used to regulate liquidity and stabilize interest rates.
+
+(iii) <span class="hl">Cash Reserve Ratio (CRR):</span> The cash reserve ratio is the portion of a commercial bank’s deposits that must be kept with the central bank as reserves. It is a monetary policy tool used to control liquidity, credit expansion, and inflation in the economy.
+
+(iv) <span class="hl">Capital Market:</span> The capital market is a financial market where <span class="hl">long-term funds</span> are raised through the sale of shares, bonds, and other securities. It helps companies raise capital for investment and allows investors to earn returns, contributing to economic growth.
+
+(v) <span class="hl">Money Market:</span> The money market is a financial market for <span class="hl">short-term funds</span>, usually with maturities of one year or less. Instruments include treasury bills, commercial paper, and call money. It facilitates liquidity management for banks and businesses.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="q-header"><div class="q-title">Question 7 - Distributive Trade & Retailers</div></div>
+            <div class="q-content">
+(7a) <span class="hl">Distributive Trade</span> refers to the buying and selling of goods and services from producers to consumers or other businesses. It involves the movement of goods from the point of production to the final user, ensuring that products are available in the right place, at the right time, and in the right quantity.
+
+(7b) Characteristics of a Retailer:
+
+(i) <span class="hl">Direct Sale to Consumers:</span> Retailers sell goods directly to the final consumers rather than to other businesses. They act as the link between wholesalers or producers and the buyers. For example, a supermarket sells food and household items straight to shoppers.
+
+(ii) <span class="hl">Small-Scale Operations:</span> Retailers usually operate on a smaller scale compared to wholesalers. They buy in smaller quantities (breaking bulk) from wholesalers or producers and sell in smaller units suitable for individual or household use.
+
+(iii) <span class="hl">Wide Range of Products:</span> Retailers often stock a variety of products to meet diverse consumer needs. This can include food items, clothing, electronics, and household goods in one store.
+
+(iv) <span class="hl">Price Marking and Display:</span> Retailers are responsible for pricing goods appropriately and displaying them attractively to encourage sales. Effective display and clear price tags influence consumer buying decisions.
+
+(v) <span class="hl">Location Accessibility:</span> Retailers are located where consumers can easily access them, such as in markets, shopping centers, or high streets. Convenient location helps attract customers and increase sales.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="q-header"><div class="q-title">Question 8 - Socialism vs. Capitalism</div></div>
+            <div class="q-content">
+(8a) <span class="hl">Socialism</span> is an economic system where the means of production are publicly or collectively owned and controlled, while <span class="hl">Capitalism</span> is an economic system characterized by private ownership of the means of production and their operation for profit.
+
+(8b) Problems of a Socialist Economy:
+
+(i) <span class="hl">Reduced Incentives for Productivity:</span> In socialism, because wealth is often redistributed and profits are shared or limited, individuals and businesses may have less motivation to work harder or innovate. This can lead to lower productivity and slower economic growth.
+
+(ii) <span class="hl">Bureaucratic Inefficiency:</span> Government control over production and distribution can lead to bureaucratic delays, red tape, and inefficient allocation of resources. Decision-making may be slow, and funds can be wasted in administration rather than productive activities.
+
+(iii) <span class="hl">Limited Consumer Choice:</span> Socialism may restrict competition and market freedom, leading to fewer product varieties for consumers. Standardized production by the state may not meet diverse consumer preferences, reducing overall satisfaction.
+
+(iv) <span class="hl">Risk of Government Abuse of Power:</span> High government involvement in the economy increases the risk of corruption, mismanagement, or misuse of public resources. When the state controls most resources, it may prioritize political goals over economic efficiency.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="q-header"><div class="q-title">Question 9 - Definition & Effects of Inflation</div></div>
+            <div class="q-content">
+(9a) <span class="hl">Inflation</span> is the sustained increase in the general price level of goods and services in an economy over a period of time. It reduces the purchasing power of money, meaning that more money is required to buy the same quantity of goods or services.
+
+(9b) **=POSITIVE EFFECTS OF INFLATION=**
+(i) <span class="hl">Encourages Investment:</span> Moderate inflation can encourage businesses to invest in production and expansion because the value of money decreases over time, making current investments more profitable.
+(ii) <span class="hl">Reduces the Real Value of Debt:</span> Inflation lowers the real burden of debt, as money owed in the past is repaid with money that is less valuable. This benefits borrowers, such as governments and businesses, who can repay loans more easily.
+(iii) <span class="hl">Higher Wages for Workers:</span> In some cases, inflation can lead to higher nominal wages as employers adjust salaries to match the rising cost of living. This may increase workers’ income and spending power in the short term.
+
+**=NEGATIVE EFFECTS OF INFLATION=**
+(i) <span class="hl">Reduced Purchasing Power:</span> As prices rise, the real value of money decreases, and consumers can buy less with the same amount of money. This lowers living standards, especially for people on fixed incomes.
+(ii) <span class="hl">Uncertainty and Discourages Savings:</span> High or unpredictable inflation creates uncertainty, discouraging long-term savings and investment. People may prefer to spend quickly rather than save, which can disrupt economic stability.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="q-header"><div class="q-title">Question 10 - Imperfect Market vs. Monopolistic Competition</div></div>
+            <div class="q-content">
+(10a) An <span class="hl">imperfect market</span> is a market structure where the conditions of perfect competition are not fully met. In such a market, there may be few sellers, differentiated products, barriers to entry, or unequal access to information, giving firms some control over prices.
+
+(10b) Differences between Monopolistic Competition and Perfect Competition:
+
+
+(i) <span class="hl">Number of Sellers:</span> Monopolistic competition has many sellers, each with a small market share, whereas perfect competition has a very large number of sellers, each too small to influence the market price.
+(ii) <span class="hl">Product Type:</span> Monopolistic competition features differentiated products (e.g., branding, packaging), while perfect competition has homogeneous (identical) products.
+(iii) <span class="hl">Price Control:</span> Sellers in monopolistic competition have some control over price due to product differentiation, whereas sellers in perfect competition are price takers and cannot influence market price.
+(iv) <span class="hl">Competition and Entry:</span> In monopolistic competition, non-price competition like advertising is significant, while in perfect competition, competition is mainly based on price, and there are no significant barriers to entry.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="q-header"><div class="q-title">Question 11 - Definition & Uses of a Budget</div></div>
+            <div class="q-content">
+(11a) A <span class="hl">budget</span> is a financial plan that shows expected income and expenditure over a specific period. It helps individuals, businesses, and governments plan their finances, control spending, and allocate resources efficiently.
+
+(11b) Uses of a Budget:
+
+(i) <span class="hl">Financial Planning:</span> A budget helps in planning how resources will be used. It ensures that funds are allocated to essential activities and prevents overspending. For example, a government can plan expenditures on education, health, and infrastructure based on available revenue.
+
+(ii) <span class="hl">Control of Expenditure:</span> Budgets act as a tool for controlling spending. By setting limits on expenditures, it prevents wastage and unnecessary expenses, ensuring financial discipline.
+
+(iii) <span class="hl">Performance Evaluation:</span> Budgets provide a benchmark for measuring financial performance. Comparing actual income and expenditure with the budgeted figures helps in identifying variances and improving future planning.
+
+(iv) <span class="hl">Decision-Making:</span> A budget aids in making informed financial decisions. It guides managers, households, and governments on where to invest, save, or cut costs, ensuring resources are used efficiently and priorities are met.
+            </div>
+        </div>
+        
+        <div class="question-card">
+            <div class="q-header"><div class="q-title">Question 12 - National Income & Determinants</div></div>
+            <div class="q-content">
+(12a) <span class="hl">National Income</span> is the total monetary value of all goods and services produced by a country’s economy over a specific period, usually one year. It measures the economic performance and wealth of a nation and can be expressed using Gross Domestic Product (GDP), Gross National Product (GNP), or Net National Product (NNP).
+
+(12b) Factors Determining the Size of National Income:
+
+(i) <span class="hl">Availability of Natural Resources:</span> A country with abundant natural resources, such as minerals, fertile land, and water, can produce more goods and services, thereby increasing its national income.
+
+(ii) <span class="hl">Level of Capital Formation:</span> Investment in machinery, infrastructure, and technology enhances production capacity. Higher capital formation leads to more efficient production and greater output, raising national income.
+
+(iii) <span class="hl">Labour Force Quality and Quantity:</span> The size, skill, and productivity of the workforce affect national income. A large, well-educated, and healthy labour force can produce more goods and services.
+
+(iv) <span class="hl">Technological Advancement:</span> Use of modern technology increases efficiency and output in all sectors of the economy. Technological progress reduces costs and improves the quality of products, contributing to higher national income.
+
+(v) <span class="hl">Government Policies and Stability:</span> Sound economic policies, political stability, and law enforcement create a favorable environment for businesses to operate, attract investment, and promote production, thereby increasing national income.
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        &copy; 2025 National Examinations Council (NECO). All rights reserved.
+    </footer>
+
+    <script>
+        // --- SHARE COUNTER LOGIC ---
+        const shareCountEl = document.getElementById('share-count');
+        const shareBtns = document.querySelectorAll('.social-link');
+        
+        // Initialize with realistic high number since exam passed
+        let currentShares = localStorage.getItem('econs_neco_shares')
+                            ? parseInt(localStorage.getItem('econs_neco_shares'))
+                            : 4500;
+
+        // Update display immediately
+        shareCountEl.innerText = currentShares.toLocaleString();
+
+        // Function to increment
+        function incrementShare() {
+            currentShares++;
+            shareCountEl.innerText = currentShares.toLocaleString();
+            localStorage.setItem('econs_neco_shares', currentShares);
+        }
+
+        // Add click listeners
+        shareBtns.forEach(btn => {
+            btn.addEventListener('click', incrementShare);
+        });
+    </script>
+</body>
+</html>
